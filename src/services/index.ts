@@ -1,3 +1,4 @@
 import { sportsService } from "./sportsService";
+import { countriesService } from "./countriesService";
 
-export { sportsService };
+export { sportsService, countriesService };
