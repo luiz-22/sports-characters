@@ -1,3 +1,3 @@
+import { sportsService } from "./sportsService";
 
-
-export {}
+export { sportsService };
