@@ -1,1 +1,3 @@
-export { };
+import { sportsController } from "./sportsController";
+
+export { sportsController };
