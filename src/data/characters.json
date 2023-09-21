@@ -1,0 +1,340 @@
+[
+  {
+    "id": 1,
+    "name": "Batman",
+    "gender": "Male",
+    "age": 32,
+    "height": 1.85,
+    "image": "https://assetsio.reedpopcdn.com/digitalfoundry-2015-is-batman-arkham-knight-the-generational-leap-we-were-hoping-for-1435051185884.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    "country": {
+      "name": "Australia",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1e6-1f1fa.svg"
+    },
+    "sports": [
+      { "name": "badminton", "icon": "🏸" },
+      { "name": "ice skating", "icon": "⛸️" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Cleopatra",
+    "gender": "Female",
+    "age": 28,
+    "height": 1.73,
+    "image": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/06/30/16881440191178.jpg",
+    "country": {
+      "name": "Russia",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg"
+    },
+    "sports": [{ "name": "basketball", "icon": "🏀" }]
+  },
+  {
+    "id": 3,
+    "name": "Gal Gadot",
+    "gender": "Female",
+    "age": 32,
+    "height": 1.79,
+    "image": "https://ellees.h-cdn.co/assets/17/46/1280x1280/square-1510919872-gal-gadot-estilo00.jpg",
+    "country": {
+      "name": "Italy",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1ee-1f1f9.svg"
+    },
+    "sports": [
+      { "name": "ajedrez", "icon": "♟️" },
+      { "name": "football", "icon": "🏈" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Geskin Kan",
+    "gender": "Male",
+    "age": 53,
+    "height": 1.71,
+    "image": "https://www.xlsemanal.com/wp-content/uploads/sites/3/2017/06/GENGHIS-KHAN-CONOCER-HISTORIA.jpg",
+    "country": {
+      "name": "France",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1eb-1f1f7.svg"
+    },
+    "sports": [
+      { "name": "dice", "icon": "🎲" },
+      { "name": "field hockey", "icon": "🏑" },
+      { "name": "ski", "icon": "🎿" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hello Kitty",
+    "gender": "Female",
+    "age": 7,
+    "height": 0.63,
+    "image": "https://www.telemundo.com/sites/nbcutelemundo/files/styles/fit-1240w/public/sites/nbcutelemundo/files/images/article/2014/08/28/hello_kitty_140920568644_4.jpg?ramen_itok=iqwQftIcTf",
+    "country": {
+      "name": "Denmark",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1e9-1f1f0.svg"
+    },
+    "sports": [
+      { "name": "badminton", "icon": "🏸" },
+      { "name": "ice hockey", "icon": "🏒" },
+      { "name": "ping pong", "icon": "🏓" },
+      { "name": "skeleton", "icon": "🛷" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Iron Man",
+    "gender": "Male",
+    "age": 34,
+    "height": 1.79,
+    "image": "https://www.cinemascomics.com/wp-content/uploads/2022/11/Iron-Man-Marvel.jpg",
+    "country": {
+      "name": "Cuba",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1e8-1f1fa.svg"
+    },
+    "sports": [
+      { "name": "baseball", "icon": "⚾" },
+      { "name": "dice", "icon": "🎲" },
+      { "name": "yoyo", "icon": "🪀" },
+      { "name": "softball", "icon": "🥎" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Jimmy Page",
+    "gender": "Male",
+    "age": 63,
+    "height": 1.73,
+    "image": "https://www.goldminemag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_xy_center%2Cq_auto:good%2Cw_1200%2Cx_2228%2Cy_1189/MTk1MDMyMTk2MzYzMzMwNzU5/jimmy-page-lz.jpg",
+    "country": {
+      "name": "Madagascar",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f2-1f1ec.svg"
+    },
+    "sports": [
+      { "name": "billiards", "icon": "🎱" },
+      { "name": "football", "icon": "🏈" },
+      { "name": "scuba diving", "icon": "🤿" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Keanu Reeves",
+    "gender": "Male",
+    "age": 45,
+    "height": 1.78,
+    "image": "https://static.independentespanol.com/2022/01/07/22/newFile.jpg?quality=75&width=1200&auto=webp",
+    "country": {
+      "name": "Spain",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1ea-1f1f8.svg"
+    },
+    "sports": [
+      { "name": "baseball", "icon": "⚾" },
+      { "name": "cricket", "icon": "🏏" },
+      { "name": "lacrosse", "icon": "🥍" },
+      { "name": "tennis", "icon": "🎾" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Lionel Messi",
+    "gender": "Male",
+    "age": 28,
+    "height": 1.68,
+    "image": "https://assets-es.imgfoot.com/media/cache/1200x675/lionel-messi-2223-goat.jpg",
+    "country": {
+      "name": "Norway",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f3-1f1f4.svg"
+    },
+    "sports": [
+      { "name": "bowling", "icon": "🎳" },
+      { "name": "boxing", "icon": "🥊" },
+      { "name": "curling", "icon": "🥌" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Lisa Simpson",
+    "gender": "Female",
+    "age": 9,
+    "height": 1.03,
+    "image": "https://anastasia-mcqueen.com/wp-content/uploads/2017/01/VIR_1034_71_cuantos_sabes_sobre_los_simpson.jpg",
+    "country": {
+      "name": "Poland",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f5-1f1f1.svg"
+    },
+    "sports": [
+      { "name": "cricket", "icon": "🏏" },
+      { "name": "football", "icon": "🏈" },
+      { "name": "karate", "icon": "🥋" },
+      { "name": "lacrosse", "icon": "🥍" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Lucas",
+    "gender": "Male",
+    "age": 19,
+    "height": 1.13,
+    "image": "https://4.bp.blogspot.com/_hDbJ15ou9QE/S8ZdJM5jzRI/AAAAAAAAABk/6Tysw4zmRh8/s1600/el_pato_lucas.gif",
+    "country": {
+      "name": "Italy",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1ee-1f1f9.svg"
+    },
+    "sports": [{ "name": "bowling", "icon": "🎳" }]
+  },
+  {
+    "id": 12,
+    "name": "Luke Skywalker",
+    "gender": "Male",
+    "age": 22,
+    "height": 1.8,
+    "image": "https://img.europapress.es/fotoweb/fotonoticia_20150620132813_1200.jpg",
+    "country": {
+      "name": "Mexico",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f2-1f1fd.svg"
+    },
+    "sports": [
+      { "name": "ajedrez", "icon": "♟️" },
+      { "name": "badminton", "icon": "🏸" },
+      { "name": "poker", "icon": "🃏" },
+      { "name": "video game", "icon": "🕹️" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Mario Bros",
+    "gender": "Male",
+    "age": 26,
+    "height": 1.65,
+    "image": "https://www.egames.news/__export/1682027718440/sites/debate/img/2023/04/20/mario.jpg_423682103.jpg",
+    "country": {
+      "name": "France",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1eb-1f1f7.svg"
+    },
+    "sports": [
+      { "name": "curling", "icon": "🥌" },
+      { "name": "field hockey", "icon": "🏑" },
+      { "name": "fishing", "icon": "🎣" },
+      { "name": "soccer", "icon": "⚽" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Michael Jordan",
+    "gender": "Male",
+    "age": 50,
+    "height": 1.98,
+    "image": "https://montenapodaily.com/wp-content/uploads/2023/02/16JORDAN-01sub-mediumSquareAt3X.jpg",
+    "country": {
+      "name": "Canada",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1e8-1f1e6.svg"
+    },
+    "sports": [
+      { "name": "dart", "icon": "🎯" },
+      { "name": "fishing", "icon": "🎣" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Mickey",
+    "gender": "Male",
+    "age": 13,
+    "height": 0.77,
+    "image": "https://lumiere-a.akamaihd.net/v1/images/mickey_mouse_fantasia_disney_ae65c20f.jpeg",
+    "country": {
+      "name": "England",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.svg"
+    },
+    "sports": [
+      { "name": "boxing", "icon": "🥊" },
+      { "name": "football", "icon": "🏈" },
+      { "name": "frisbee", "icon": "🥏" },
+      { "name": "volleyball", "icon": "🏐" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Pikachu",
+    "gender": "Male",
+    "age": 10,
+    "height": 0.58,
+    "image": "https://m.media-amazon.com/images/I/61d1dUhE3ZL._AC_UF1000,1000_QL80_.jpg",
+    "country": {
+      "name": "Japan",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1ef-1f1f5.svg"
+    },
+    "sports": [
+      { "name": "dart", "icon": "🎯" },
+      { "name": "football", "icon": "🏈" },
+      { "name": "ice skating", "icon": "⛸️" },
+      { "name": "video game", "icon": "🕹️" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Scorpion",
+    "gender": "Male",
+    "age": 39,
+    "height": 1.88,
+    "image": "https://img.asmedia.epimg.net/resizer/IcitEnutAh063D4wAZAddlmFbBg=/1200x1200/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/LKV3LK22CNOR7CZEVLPQKIBQVE.jpg",
+    "country": {
+      "name": "Netherlands",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f3-1f1f1.svg"
+    },
+    "sports": [
+      { "name": "billiards", "icon": "🎱" },
+      { "name": "frisbee", "icon": "🥏" },
+      { "name": "golf", "icon": "⛳" },
+      { "name": "paintball", "icon": "🔫" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Sonic",
+    "gender": "Male",
+    "age": 17,
+    "height": 0.88,
+    "image": "https://assetsio.reedpopcdn.com/sonic-origins_o0ETtrM.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    "country": {
+      "name": "Spain",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1ea-1f1f8.svg"
+    },
+    "sports": [
+      { "name": "basketball", "icon": "🏀" },
+      { "name": "boxing", "icon": "🥊" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Spiderman",
+    "gender": "Male",
+    "age": 21,
+    "height": 1.74,
+    "image": "https://assetsio.reedpopcdn.com/spider-man-remastered-pc.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    "country": {
+      "name": "Russia",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg"
+    },
+    "sports": [
+      { "name": "baseball", "icon": "⚾" },
+      { "name": "fishing", "icon": "🎣" },
+      { "name": "ice skating", "icon": "️⛸️" },
+      { "name": "rugby", "icon": "🏉" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Usain Bolt",
+    "gender": "Male",
+    "age": 33,
+    "height": 1.91,
+    "image": "https://builtforathletes.com/cdn/shop/articles/Usain_Bolt.jpg?v=1615809551",
+    "country": {
+      "name": "Morocco",
+      "flag": "https://twemoji.maxcdn.com/2/svg/1f1f2-1f1e6.svg"
+    },
+    "sports": [
+      { "name": "ajedrez", "icon": "♟️" },
+      { "name": "ice hockey", "icon": "🏒" },
+      { "name": "karate", "icon": "🥋" }
+    ]
+  }
+]

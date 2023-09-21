@@ -33,5 +33,5 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
 | ----- | --- | --------- | --- | ------- |
 | id    |     | id        |     | id      |
 | name  |     | name      |     | name    |
-|       |     | age       |     |         |
-|       |     | height    |     |         |
+| icon  |     | age       |     | flag    |
+|       |     | height    |     | code    |
