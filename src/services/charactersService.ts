@@ -7,12 +7,12 @@ const getCharacters = async () => {
 };
 
 const getCharacterByName = async (name: string) => {
-  const charactersByName = characters.filter((ch) => (ch.name = name));
+  const charactersByName = characters.filter((ch) => (ch.name === name));
   return charactersByName;
 };
 
 const getCharacterById = async (id: number) => {
-  const character = characters.find((ch) => (ch.id = id));
+  const character = characters.find((ch) => (ch.id === id));
   if (!character) throw new ClientError("Invalid ID", 400);
   return character;
 };
