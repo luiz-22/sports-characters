@@ -1,11 +1,11 @@
 import express from "express";
-import morgan from "morgan";
 import router from "./routes";
+import setMiddlewares from "./config/setMiddlewares";
 
-const server = express();
+const app = express();
 
-server.use(morgan("dev"));
-server.use(express.json());
-server.use(router);
+setMiddlewares(app);
 
-export default server;
+app.use(router);
+
+export default app;
