@@ -45,3 +45,28 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
 |       |     | age       |     | code    |
 |       |     | height    |     |         |
 |       |     | image     |     |         |
+
+```json
+{
+  "id": 35,
+  "name": "Pepe",
+  "gender": "Male",
+  "age": 47,
+  "height": 1.79,
+  "image": "https://assetsio.reedpopcdn.com/digitalfoundry-2015-is-batman-arkham-knight-the-generational-leap-we-were-hoping-for-1435051185884.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+  "country": {
+    "name": "Australia",
+    "flag": "https://twemoji.maxcdn.com/2/svg/1f1e6-1f1fa.svg"
+  },
+  "sports": [
+    {
+      "name": "badminton",
+      "icon": "🏸"
+    },
+    {
+      "name": "ice skating",
+      "icon": "⛸️"
+    }
+  ]
+}
+```

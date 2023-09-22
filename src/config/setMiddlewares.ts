@@ -1,6 +1,5 @@
-import { Request, Response, NextFunction, Express, json } from "express";
+import { Express, json } from "express";
 import morgan from "morgan";
-import { resError } from "../utils";
 
 const setMiddlewares = (app: Express) => {
   app.use(json());

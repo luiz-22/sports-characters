@@ -43,8 +43,8 @@ const createCharacter = async () => {
     id: 35,
     name: "Pepe",
     gender: "Male",
-    age: 32,
-    height: 1.85,
+    age: 47,
+    height: 1.79,
     image:
       "https://assetsio.reedpopcdn.com/digitalfoundry-2015-is-batman-arkham-knight-the-generational-leap-we-were-hoping-for-1435051185884.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
     country: {
