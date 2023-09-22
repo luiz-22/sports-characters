@@ -44,7 +44,7 @@ const validateAge = (req: Request, res: Response, next: NextFunction) => {
 const validateHeight = (req: Request, res: Response, next: NextFunction) => {
   const { height } = req.body;
   if (!height) req.errors.push("The height is missing.");
-  if (parseInt(height) < 1)
+  if (parseInt(height) > 0)
     req.errors.push("The height must be greater than zero.");
   next();
 };
@@ -68,7 +68,6 @@ const validateSports = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const validateErrors = (req: Request, res: Response, next: NextFunction) => {
-  console.log(req.errors);
   if (req.errors.length) {
     res.status(400).json(req.errors);
   } else {

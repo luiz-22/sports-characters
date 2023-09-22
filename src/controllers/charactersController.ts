@@ -60,6 +60,7 @@ const getCharacterBySport = async (req: Request, res: Response) => {
 
 const createCharacter = async (req: Request, res: Response) => {
   const character = await charactersService.createCharacter(req.body);
+  console.log(character);
   response(res, 200, character);
 };
 

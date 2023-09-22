@@ -48,12 +48,12 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
 
 ```json
 {
-  "name": "Pepe",
+  "name": "Pocoyo",
   "gender": "Male",
-  "age": 47,
-  "height": 1.79,
-  "image": "https://assetsio.reedpopcdn.com/digitalfoundry-2015-is-batman-arkham-knight-the-generational-leap-we-were-hoping-for-1435051185884.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-  "country": "Australia",
-  "sports": ["badminton", "ice skating"]
+  "age": 4,
+  "height": 0.57,
+  "image": "https://yt3.googleusercontent.com/ytc/AOPolaRbXJfMKdTTy2A4IJwAtZUku7Ze8f96A_Qf1ByM1kw=s900-c-k-c0x00ffffff-no-rj",
+  "country": "Bulgaria",
+  "sports": ["curling", "frisbee", "yoyo"]
 }
 ```

@@ -37,19 +37,19 @@ const getCharacterBySport = async (sport: string) => {
   return charactersBySport;
 };
 
-const createCharacter = async (data: any) => {
-  const findCountry = countries.find((c) => c.name === data.country);
+const createCharacter = async (character: any) => {
+  const findCountry = countries.find((c) => c.name === character.country);
   const filteredSports = sports
-    .filter((sport) => data.sports.includes(sport.name))
+    .filter((sport) => character.sports.includes(sport.name))
     .map((sport) => ({ name: sport.name, icon: sport.icon }));
 
   const newData = {
     id: Date.now(),
-    name: data.name,
-    gender: data.gender,
-    age: data.age,
-    height: data.height,
-    image: data.image,
+    name: character.name,
+    gender: character.gender,
+    age: character.age,
+    height: character.height,
+    image: character.image,
     country: findCountry
       ? { name: findCountry.name, flag: findCountry.flag }
       : {},
@@ -59,7 +59,7 @@ const createCharacter = async (data: any) => {
   // Leer el archivo JSON existente
   jsonfile.readFile(file, (err: Error, data: any) => {
     if (err) {
-      console.error("Error al leer el archivo:", err);
+      console.error("Error reading file:", err);
       return;
     }
 
@@ -72,9 +72,65 @@ const createCharacter = async (data: any) => {
         console.error("Error writing to file:", err);
         return;
       }
-      return newData;
     });
   });
+
+  return newData;
+};
+
+const updateCharacter = async (id: number, character: any) => {
+  const findCountry = countries.find((c) => c.name === character.country);
+  const filteredSports = sports
+    .filter((sport) => character.sports.includes(sport.name))
+    .map((sport) => ({ name: sport.name, icon: sport.icon }));
+
+  const newData = {
+    id: id,
+    name: character.name,
+    gender: character.gender,
+    age: character.age,
+    height: character.height,
+    image: character.image,
+    country: findCountry
+      ? { name: findCountry.name, flag: findCountry.flag }
+      : {},
+    sports: filteredSports,
+  };
+
+  // Leer el archivo JSON existente
+  jsonfile.readFile(file, (err: Error, data: any) => {
+    if (err) {
+      console.error("Error reading file:", err);
+      return;
+    }
+
+    // Encuentra el objeto que deseas actualizar (por ejemplo, por su id)
+    const characterToUpdate = data.find((element: any) => element.id === id);
+
+    // Actualiza los campos del objeto
+    if (characterToUpdate) {
+      (characterToUpdate.id = id),
+        (characterToUpdate.name = character.name),
+        (characterToUpdate.gender = character.gender),
+        (characterToUpdate.age = character.age),
+        (characterToUpdate.height = character.height),
+        (characterToUpdate.image = character.image),
+        (characterToUpdate.country = findCountry
+          ? { name: findCountry.name, flag: findCountry.flag }
+          : {}),
+        (characterToUpdate.sports = filteredSports);
+    }
+
+    // Escribir el JSON actualizado de vuelta al archivo
+    jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
+      if (err) {
+        console.error("Error writing to file:", err);
+        return;
+      }
+    });
+  });
+
+  return newData;
 };
 
 export const charactersService = {
