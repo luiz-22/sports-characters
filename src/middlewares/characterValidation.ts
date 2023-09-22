@@ -27,9 +27,9 @@ const validateName = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const validateGender = (req: Request, res: Response, next: NextFunction) => {
-  const { gender } = req.body;
+  const { gender } = req.body;  
   if (!gender) req.errors.push("The gender is missing.");
-  if (gender && (gender !== "Male" || gender !== "Female"))
+  if (gender && (gender !== "Male" && gender !== "Female"))
     req.errors.push("Gender must be Male or Female.");
   next();
 };
@@ -62,8 +62,8 @@ const validateCountry = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const validateSports = (req: Request, res: Response, next: NextFunction) => {
-  const { sport } = req.body;
-  if (!sport) req.errors.push("The sport is missing.");
+  const { sports } = req.body;
+  if (!sports) req.errors.push("The sport is missing.");
   next();
 };
 
@@ -76,14 +76,28 @@ const validateErrors = (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-export {
-  initValidation,
-  validateName,
-  validateGender,
-  validateAge,
-  validateHeight,
-  validateImage,
-  validateCountry,
-  validateSports,
-  validateErrors,
+const characterValidation = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  initValidation(req, res, () => {
+    validateName(req, res, () => {
+      validateGender(req, res, () => {
+        validateAge(req, res, () => {
+          validateHeight(req, res, () => {
+            validateImage(req, res, () => {
+              validateCountry(req, res, () => {
+                validateSports(req, res, () => {
+                  validateErrors(req, res, next);
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
 };
+
+export default characterValidation;

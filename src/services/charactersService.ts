@@ -1,10 +1,9 @@
-import { characters } from "../data/index";
+import { characters, countries, sports } from "../data/index";
 import ClientError from "../errors/errors";
 const jsonfile = require("jsonfile");
 const file = "../sports-characters/src/data/characters.json";
 
 const getCharacters = async () => {
-  console.log(characters);
   return characters;
 };
 
@@ -38,29 +37,23 @@ const getCharacterBySport = async (sport: string) => {
   return charactersBySport;
 };
 
-const createCharacter = async () => {
+const createCharacter = async (data: any) => {
+  const findCountry = countries.find((c) => c.name === data.country);
+  const filteredSports = sports
+    .filter((sport) => data.sports.includes(sport.name))
+    .map((sport) => ({ name: sport.name, icon: sport.icon }));
+
   const newData = {
-    id: 35,
-    name: "Pepe",
-    gender: "Male",
-    age: 47,
-    height: 1.79,
-    image:
-      "https://assetsio.reedpopcdn.com/digitalfoundry-2015-is-batman-arkham-knight-the-generational-leap-we-were-hoping-for-1435051185884.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-    country: {
-      name: "Australia",
-      flag: "https://twemoji.maxcdn.com/2/svg/1f1e6-1f1fa.svg",
-    },
-    sports: [
-      {
-        name: "badminton",
-        icon: "🏸",
-      },
-      {
-        name: "ice skating",
-        icon: "⛸️",
-      },
-    ],
+    id: Date.now(),
+    name: data.name,
+    gender: data.gender,
+    age: data.age,
+    height: data.height,
+    image: data.image,
+    country: findCountry
+      ? { name: findCountry.name, flag: findCountry.flag }
+      : {},
+    sports: filteredSports,
   };
 
   // Leer el archivo JSON existente
@@ -76,10 +69,10 @@ const createCharacter = async () => {
     // Escribir el JSON actualizado de vuelta al archivo
     jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
       if (err) {
-        console.error("Error al escribir en el archivo:", err);
+        console.error("Error writing to file:", err);
         return;
       }
-      console.log("Datos agregados correctamente.");
+      return newData;
     });
   });
 };

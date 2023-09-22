@@ -59,7 +59,7 @@ const getCharacterBySport = async (req: Request, res: Response) => {
 };
 
 const createCharacter = async (req: Request, res: Response) => {
-  const character = await charactersService.createCharacter();
+  const character = await charactersService.createCharacter(req.body);
   response(res, 200, character);
 };
 
@@ -69,5 +69,5 @@ export const charactersController = {
   getCharacterByGender: catchAsync(getCharacterByGender),
   getCharacterByCountry: catchAsync(getCharacterByCountry),
   getCharacterBySport: catchAsync(getCharacterBySport),
-  createCharacter,
+  createCharacter: catchAsync(createCharacter),
 };
