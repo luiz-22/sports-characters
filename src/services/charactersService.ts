@@ -33,7 +33,7 @@ const getCharacterByCountry = async (country: string) => {
 
 const getCharacterBySport = async (sport: string) => {
   const charactersBySport = characters.filter((ch) =>
-    ch.sports.filter((s) => s.name === sport)
+    ch.sports.some((s) => s.name === sport)
   );
   return charactersBySport;
 };

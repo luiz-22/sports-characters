@@ -20,7 +20,7 @@ const getCharacterById = async (req: Request, res: Response) => {
 };
 
 const getCharacterByGender = async (req: Request, res: Response) => {
-  const { gender } = req.query;
+  const { gender } = req.params;
   let characters;
 
   if (gender && typeof gender === "string") {
@@ -33,7 +33,7 @@ const getCharacterByGender = async (req: Request, res: Response) => {
 };
 
 const getCharacterByCountry = async (req: Request, res: Response) => {
-  const { country } = req.query;
+  const { country } = req.params;
   let characters;
 
   if (country && typeof country === "string") {
@@ -46,7 +46,7 @@ const getCharacterByCountry = async (req: Request, res: Response) => {
 };
 
 const getCharacterBySport = async (req: Request, res: Response) => {
-  const { sport } = req.query;
+  const { sport } = req.params;
   let characters;
 
   if (sport && typeof sport === "string") {
