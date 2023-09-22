@@ -141,4 +141,5 @@ export const charactersService = {
   getCharacterByCountry,
   getCharacterBySport,
   createCharacter,
+  updateCharacter,
 };
