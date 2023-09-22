@@ -71,6 +71,13 @@ const updateCharacter = async (req: Request, res: Response) => {
   response(res, 200, character);
 };
 
+const deleteCharacter = async (req: Request, res: Response) => {
+  const character = await charactersService.deleteCharacter(
+    parseInt(req.params.id)
+  );
+  response(res, 200, character);
+};
+
 export const charactersController = {
   getCharacters: catchAsync(getCharacters),
   getCharacterById: catchAsync(getCharacterById),
@@ -79,4 +86,5 @@ export const charactersController = {
   getCharacterBySport: catchAsync(getCharacterBySport),
   createCharacter: catchAsync(createCharacter),
   updateCharacter: catchAsync(updateCharacter),
+  deleteCharacter: catchAsync(deleteCharacter),
 };

@@ -11,5 +11,6 @@ router.get("/country/:country", charactersController.getCharacterByCountry);
 router.get("/sport/:sport", charactersController.getCharacterBySport);
 router.post("/", characterValidation, charactersController.createCharacter);
 router.put("/:id", characterValidation, charactersController.updateCharacter);
+router.delete("/:id", charactersController.deleteCharacter);
 
 export default router;

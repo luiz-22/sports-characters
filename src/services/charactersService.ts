@@ -133,6 +133,36 @@ const updateCharacter = async (id: number, character: any) => {
   return newData;
 };
 
+const deleteCharacter = async (id: number) => {
+  // Leer el archivo JSON existente
+  jsonfile.readFile(file, (err: Error, data: any) => {
+    if (err) {
+      console.error("Error reading file:", err);
+      return;
+    }
+
+    // Encuentra el índice del objeto que deseas eliminar (por ejemplo, por su id)
+    const characterToDelete = data.findIndex(
+      (element: any) => element.id === id
+    );
+
+    // Escribir el JSON actualizado de vuelta al archivo
+    if (characterToDelete !== -1) {
+      data.splice(characterToDelete, id);
+    }
+
+    // Escribir el JSON actualizado de vuelta al archivo
+    jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
+      if (err) {
+        console.error("Error writing to file:", err);
+        return;
+      }
+    });
+  });
+
+  return "Eliminated character.";
+};
+
 export const charactersService = {
   getCharacters,
   getCharacterByName,
@@ -142,4 +172,5 @@ export const charactersService = {
   getCharacterBySport,
   createCharacter,
   updateCharacter,
+  deleteCharacter,
 };
