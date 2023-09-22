@@ -9,6 +9,11 @@ setMiddlewares(app);
 
 app.use(router);
 
+app.use((req, res) => {
+  res.status(500);
+  resError(res, res.statusCode, "Ruta no encontrada");
+});
+
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.status(500);
   const message = err.message || "Internal Server Error";

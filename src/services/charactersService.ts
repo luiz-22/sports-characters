@@ -59,8 +59,7 @@ const createCharacter = async (character: any) => {
   // Leer el archivo JSON existente
   jsonfile.readFile(file, (err: Error, data: any) => {
     if (err) {
-      console.error("Error reading file:", err);
-      return;
+      throw new ClientError("Error reading file.", 400);
     }
 
     // Agregar los nuevos datos al array existente
@@ -69,8 +68,7 @@ const createCharacter = async (character: any) => {
     // Escribir el JSON actualizado de vuelta al archivo
     jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
       if (err) {
-        console.error("Error writing to file:", err);
-        return;
+        throw new ClientError("Error writing to file.", 400);
       }
     });
   });
@@ -100,8 +98,7 @@ const updateCharacter = async (id: number, character: any) => {
   // Leer el archivo JSON existente
   jsonfile.readFile(file, (err: Error, data: any) => {
     if (err) {
-      console.error("Error reading file:", err);
-      return;
+      throw new ClientError("Error reading file.", 400);
     }
 
     // Encuentra el objeto que deseas actualizar (por ejemplo, por su id)
@@ -124,8 +121,7 @@ const updateCharacter = async (id: number, character: any) => {
     // Escribir el JSON actualizado de vuelta al archivo
     jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
       if (err) {
-        console.error("Error writing to file:", err);
-        return;
+        throw new ClientError("Error writing to file.", 400);
       }
     });
   });
@@ -137,8 +133,7 @@ const deleteCharacter = async (id: number) => {
   // Leer el archivo JSON existente
   jsonfile.readFile(file, (err: Error, data: any) => {
     if (err) {
-      console.error("Error reading file:", err);
-      return;
+      throw new ClientError("Error reading file.", 400);
     }
 
     // Encuentra el índice del objeto que deseas eliminar (por ejemplo, por su id)
@@ -154,8 +149,9 @@ const deleteCharacter = async (id: number) => {
     // Escribir el JSON actualizado de vuelta al archivo
     jsonfile.writeFile(file, data, { spaces: 2 }, (err: Error) => {
       if (err) {
-        console.error("Error writing to file:", err);
-        return;
+        throw new ClientError("Error writing to file.", 400);
+        // console.error("Error writing to file:", err);
+        // return;
       }
     });
   });
