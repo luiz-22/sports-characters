@@ -4,10 +4,11 @@ import { Request, Response } from "express";
 import { response } from "../utils";
 
 const getCharacters = async (req: Request, res: Response) => {
-  const { name } = req.params;
-  const characters = name
-    ? await charactersService.getCharacterByName(name)
-    : await charactersService.getCharacters();
+  const { name } = req.query;
+  const characters =
+    name && typeof name === "string" // Me pide que compruebe si es un string
+      ? await charactersService.getCharacterByName(name)
+      : await charactersService.getCharacters();
   response(res, 200, characters);
 };
 
