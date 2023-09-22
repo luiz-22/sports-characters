@@ -19,6 +19,25 @@ const getCharacterById = async (id: number) => {
   return character;
 };
 
+const getCharacterByGender = async (gender: string) => {
+  const charactersByGender = characters.filter((ch) => ch.gender === gender);
+  return charactersByGender;
+};
+
+const getCharacterByCountry = async (country: string) => {
+  const charactersByCountry = characters.filter(
+    (ch) => ch.country.name === country
+  );
+  return charactersByCountry;
+};
+
+const getCharacterBySport = async (sport: string) => {
+  const charactersBySport = characters.filter((ch) =>
+    ch.sports.filter((s) => s.name === sport)
+  );
+  return charactersBySport;
+};
+
 const createCharacter = async () => {
   const newData = {
     id: 35,
@@ -69,5 +88,8 @@ export const charactersService = {
   getCharacters,
   getCharacterByName,
   getCharacterById,
+  getCharacterByGender,
+  getCharacterByCountry,
+  getCharacterBySport,
   createCharacter,
 };

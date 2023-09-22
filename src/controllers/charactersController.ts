@@ -18,6 +18,10 @@ const getCharacterById = async (req: Request, res: Response) => {
   response(res, 200, character);
 };
 
+const getCharacterByGender = async (req: Request, res: Response) => {};
+const getCharacterByCountry = async (req: Request, res: Response) => {};
+const getCharacterBySport = async (req: Request, res: Response) => {};
+
 const createCharacter = async (req: Request, res: Response) => {
   const character = await charactersService.createCharacter();
   response(res, 200, character);
@@ -26,5 +30,8 @@ const createCharacter = async (req: Request, res: Response) => {
 export const charactersController = {
   getCharacters: catchAsync(getCharacters),
   getCharacterById: catchAsync(getCharacterById),
+  getCharacterByGender: catchAsync(getCharacterByGender),
+  getCharacterByCountry: catchAsync(getCharacterByCountry),
+  getCharacterBySport: catchAsync(getCharacterBySport),
   createCharacter,
 };
