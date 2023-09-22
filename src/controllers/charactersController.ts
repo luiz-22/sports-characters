@@ -18,7 +18,13 @@ const getCharacterById = async (req: Request, res: Response) => {
   response(res, 200, character);
 };
 
+const createCharacter = async (req: Request, res: Response) => {
+  const character = await charactersService.createCharacter();
+  response(res, 200, character);
+};
+
 export const charactersController = {
   getCharacters: catchAsync(getCharacters),
   getCharacterById: catchAsync(getCharacterById),
+  createCharacter,
 };

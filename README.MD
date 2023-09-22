@@ -4,6 +4,14 @@
 npm install --save-dev typescript @types/node @types/express ts-node
 ```
 
+Para lectura y escritura de archivos json.
+
+```bash
+npm install --save jsonfile
+```
+
+## Configuración
+
 Crea un archivo `tsconfig.json` en el directorio raíz de tu proyecto con la siguiente configuración inicial:
 
 ```json
