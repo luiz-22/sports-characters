@@ -1,4 +1,5 @@
 import { catchAsync } from "../errors";
+import ClientError from "../errors/errors";
 import { charactersService } from "../services";
 import { Request, Response } from "express";
 import { response } from "../utils";
@@ -18,9 +19,44 @@ const getCharacterById = async (req: Request, res: Response) => {
   response(res, 200, character);
 };
 
-const getCharacterByGender = async (req: Request, res: Response) => {};
-const getCharacterByCountry = async (req: Request, res: Response) => {};
-const getCharacterBySport = async (req: Request, res: Response) => {};
+const getCharacterByGender = async (req: Request, res: Response) => {
+  const { gender } = req.query;
+  let characters;
+
+  if (gender && typeof gender === "string") {
+    characters = await charactersService.getCharacterByGender(gender);
+  } else {
+    throw new ClientError("Error in filtering by gender.", 400);
+  }
+
+  response(res, 200, characters);
+};
+
+const getCharacterByCountry = async (req: Request, res: Response) => {
+  const { country } = req.query;
+  let characters;
+
+  if (country && typeof country === "string") {
+    characters = await charactersService.getCharacterByCountry(country);
+  } else {
+    throw new ClientError("Error in filtering by country.", 400);
+  }
+
+  response(res, 200, characters);
+};
+
+const getCharacterBySport = async (req: Request, res: Response) => {
+  const { sport } = req.query;
+  let characters;
+
+  if (sport && typeof sport === "string") {
+    characters = await charactersService.getCharacterBySport(sport);
+  } else {
+    throw new ClientError("Error in filtering by sport.", 400);
+  }
+
+  response(res, 200, characters);
+};
 
 const createCharacter = async (req: Request, res: Response) => {
   const character = await charactersService.createCharacter();
