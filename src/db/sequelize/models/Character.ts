@@ -1,7 +1,7 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 import { Sport } from "./Sport"; // Importa el modelo Sport aquí
 
-class Character extends Model {
+export class Character extends Model {
   public id!: number;
   public name!: string;
   public gender!: "Male" | "Female";
@@ -13,7 +13,7 @@ class Character extends Model {
   public readonly countryId!: number; // Esto será configurado por Sequelize automáticamente
 
   // Define la relación N:M con Sport
-  public getSports!: () => Promise<Sport[]>; // Esto debería funcionar ahora
+  public getSports!: () => Promise<Sport[]>;
 }
 
 export const initCharacterModel = (sequelize: Sequelize) => {

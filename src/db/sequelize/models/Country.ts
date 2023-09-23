@@ -1,6 +1,6 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 
-class Country extends Model {
+export class Country extends Model {
   public id!: number;
   public flag!: string;
   public name!: string;

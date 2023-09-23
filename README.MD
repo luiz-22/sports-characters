@@ -34,6 +34,12 @@ npm install --save sequelize
 npm install --save pg pg-hstore # Postgres
 ```
 
+### `dotenv`
+
+```bash
+npm install dotenv
+```
+
 ## Configuración
 
 ### `tsconfig.json`
