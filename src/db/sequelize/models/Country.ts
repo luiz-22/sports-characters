@@ -1,6 +1,6 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 
-export class Country extends Model {
+class Country extends Model {
   public id!: number;
   public flag!: string;
   public name!: string;
@@ -37,3 +37,5 @@ export const initCountryModel = (sequelize: Sequelize) => {
 };
 
 // Aquí puedes definir relaciones u otros métodos relacionados con el modelo Country
+
+export { Country }; // Exporta el modelo Country

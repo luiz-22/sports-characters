@@ -1,7 +1,7 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
-import { Sport } from "./Sport"; // Importa el modelo Sport aquí
+import { Sport } from "./Sport";
 
-export class Character extends Model {
+class Character extends Model {
   public id!: number;
   public name!: string;
   public gender!: "Male" | "Female";
@@ -65,3 +65,5 @@ export const initCharacterModel = (sequelize: Sequelize) => {
 };
 
 // Aquí defines las relaciones con otros modelos (Country) en el archivo apropiado.
+
+export { Character }; // Exporta el modelo Character

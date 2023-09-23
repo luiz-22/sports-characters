@@ -1,6 +1,6 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 
-export class Sport extends Model {
+class Sport extends Model {
   public id!: number;
   public name!: string;
   public icon!: string;
@@ -32,3 +32,5 @@ export const initSportModel = (sequelize: Sequelize) => {
 };
 
 // Aquí puedes definir relaciones u otros métodos relacionados con el modelo Sport
+
+export { Sport }; // Exporta el modelo Sport

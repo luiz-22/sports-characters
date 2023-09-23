@@ -1,15 +1,13 @@
 import { Sequelize } from "sequelize";
+import { envs } from "../../config/envs";
 import { initCharacterModel, Character } from "./models/Character";
 import { initCountryModel, Country } from "./models/Country";
 import { initSportModel, Sport } from "./models/Sport";
 
 // Configura la conexión a la base de datos PostgreSQL
 const sequelize = new Sequelize(
-  "postgres://usuario:contraseña@localhost:5432/nombre_basedatos",
+  `postgresql://${envs.PGUSER}:${envs.PGPASSWORD}@${envs.PGHOST}:${envs.PGPORT}/${envs.PGDATABASE}`,
   {
-    dialect: "postgres", // Usa el dialecto 'postgres' para PostgreSQL
-    host: "localhost", // Cambia esto al host de tu base de datos
-    port: 5432, // Cambia esto al puerto de tu base de datos PostgreSQL
     logging: false, // Puedes cambiar esto para habilitar/desabilitar el registro de consultas SQL
   }
 );
