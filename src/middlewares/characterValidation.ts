@@ -14,12 +14,6 @@ const initValidation = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-// const validateId = (req: Request, res: Response, next: NextFunction) => {
-//   const { id } = req.body;
-//   if (!id) req.errors.push("The id is missing.");
-//   next();
-// };
-
 const validateName = (req: Request, res: Response, next: NextFunction) => {
   const { name } = req.body;
   if (!name) req.errors.push("The name is missing.");
