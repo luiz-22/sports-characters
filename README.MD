@@ -24,6 +24,16 @@ npm install --save jsonfile
 npm install express-validator
 ```
 
+### `sequelize`
+
+```bash
+npm install --save sequelize
+```
+
+```bash
+npm install --save pg pg-hstore # Postgres
+```
+
 ## Configuración
 
 ### `tsconfig.json`
