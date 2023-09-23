@@ -95,3 +95,21 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
   "sports": ["curling", "frisbee", "yoyo"]
 }
 ```
+
+## PostgreSQL
+
+### Crear una la db
+
+```bash
+create database sportcharacters;
+```
+
+### Comandos
+
+```bash
+\l                 # Ver las db
+\c sportcharacters # Accedo a la db
+\dt                # Ver las tablas
+\d                 # Detalle de la tabla
+\! cls             # Limpia la pantalla
+```
