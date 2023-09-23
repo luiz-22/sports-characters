@@ -1,16 +1,32 @@
 ## Instalación
 
+### `express`
+
+```bash
+npm install express
+```
+
+### `typescript`
+
 ```bash
 npm install --save-dev typescript @types/node @types/express ts-node
 ```
 
-Para lectura y escritura de archivos json.
+### `jsonfile`
 
 ```bash
 npm install --save jsonfile
 ```
 
+### `express-validator`
+
+```bash
+npm install express-validator
+```
+
 ## Configuración
+
+### `tsconfig.json`
 
 Crea un archivo `tsconfig.json` en el directorio raíz de tu proyecto con la siguiente configuración inicial:
 
@@ -27,6 +43,8 @@ Crea un archivo `tsconfig.json` en el directorio raíz de tu proyecto con la sig
 }
 ```
 
+### `package.json`
+
 Abre tu archivo `package.json` y define los siguientes scripts en la sección "scripts":
 
 ```json
@@ -37,6 +55,8 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
 }
 ```
 
+## Modelo E-R
+
 | sport | N:M | character | N:1 | country |
 | ----- | --- | --------- | --- | ------- |
 | id    |     | id        |     | id      |
@@ -45,6 +65,8 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
 |       |     | age       |     | code    |
 |       |     | height    |     |         |
 |       |     | image     |     |         |
+
+## Ejemplo de un post
 
 ```json
 {
