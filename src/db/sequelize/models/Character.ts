@@ -8,12 +8,6 @@ class Character extends Model {
   public age!: number;
   public height!: number;
   public image!: string;
-
-  // Relación 1:M con Country
-  public readonly countryId!: number; // Esto será configurado por Sequelize automáticamente
-
-  // Define la relación N:M con Sport
-  public getSports!: () => Promise<Sport[]>;
 }
 
 export const initCharacterModel = (sequelize: Sequelize) => {
@@ -57,11 +51,6 @@ export const initCharacterModel = (sequelize: Sequelize) => {
       timestamps: false, // Desactivar los campos createdAt y updatedAt
     }
   );
-
-  // Define la relación N:M con Sport
-  // Character.belongsToMany(Sport, {
-  //   through: "CharacterSport", // Nombre de la tabla de unión en la base de datos
-  // });
 };
 
 // Aquí defines las relaciones con otros modelos (Country) en el archivo apropiado.

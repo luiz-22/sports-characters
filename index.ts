@@ -1,15 +1,25 @@
 import app from "./src/server";
 import { sequelize } from "./src/db/sequelize/db";
-import { envs } from "./src/config/envs";
 
+// Sin ORM
+// app.listen(3000, () => {
+//   console.log("Listening on port 3000.");
+// });
+
+// Conexión con Sequelize
 sequelize
   .authenticate() // Prueba la conexión a la base de datos
   .then(() => {
-    console.log("Conexión a la base de datos establecida.");
+    console.log("Connection to the database established.");
+    // Elimina todas las tablas existentes y las vuelve a crear
+    return sequelize.sync({ force: true });
+  })
+  .then(() => {
+    console.log("All tables have been synchronized.");
     app.listen(3000, () => {
-      console.log("Escuchando en puerto 3000");
+      console.log("Listening on port 3000.");
     });
   })
-  .catch((error: Error) => {
-    console.error("Error al conectar a la base de datos:", error);
+  .catch((error) => {
+    console.error("Error connecting to database:", error);
   });
