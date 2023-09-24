@@ -59,9 +59,9 @@ export const initCharacterModel = (sequelize: Sequelize) => {
   );
 
   // Define la relación N:M con Sport
-  Character.belongsToMany(Sport, {
-    through: "CharacterSport", // Nombre de la tabla de unión en la base de datos
-  });
+  // Character.belongsToMany(Sport, {
+  //   through: "CharacterSport", // Nombre de la tabla de unión en la base de datos
+  // });
 };
 
 // Aquí defines las relaciones con otros modelos (Country) en el archivo apropiado.

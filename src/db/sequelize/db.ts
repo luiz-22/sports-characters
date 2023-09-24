@@ -18,8 +18,8 @@ initCountryModel(sequelize);
 initSportModel(sequelize);
 
 // Define la relación N:M entre Character y Sport
-Character.belongsToMany(Sport, { through: "CharacterSport" });
-Sport.belongsToMany(Character, { through: "CharacterSport" });
+// Character.belongsToMany(Sport, { through: "CharacterSport" });
+// Sport.belongsToMany(Character, { through: "CharacterSport" });
 
 // Sincroniza los modelos con la base de datos (esto crea las tablas si no existen)
 sequelize.sync();

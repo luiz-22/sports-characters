@@ -110,6 +110,6 @@ create database sportcharacters;
 \l                 # Ver las db
 \c sportcharacters # Accedo a la db
 \dt                # Ver las tablas
-\d                 # Detalle de la tabla
+\d tabla           # Detalle de la tabla
 \! cls             # Limpia la pantalla
 ```
