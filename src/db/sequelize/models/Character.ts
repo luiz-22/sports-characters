@@ -1,6 +1,13 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
+import { Sport } from "./Sport";
 
 class Character extends Model {
+  addSports(sportDb: any) {
+    throw new Error("Method not implemented.");
+  }
+  addSport(sport: Sport) {
+    throw new Error("Method not implemented.");
+  }
   public id!: number;
   public name!: string;
   public gender!: "Male" | "Female";

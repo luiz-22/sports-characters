@@ -51,7 +51,7 @@ async function seedCharacters() {
         },
       });
 
-      const character = await Character.create({
+      const newCharacter = await Character.create({
         id: characterData.id,
         name: characterData.name,
         gender: characterData.gender,
@@ -59,6 +59,15 @@ async function seedCharacters() {
         height: characterData.height,
         image: characterData.image,
         CountryId: country ? country.id : 0,
+      });
+
+      //console.log(characterData.sports);
+      characterData.sports.forEach(async (el: any) => {
+        let sportDb: any = await Sport.findAll({
+          where: { name: el.name },
+        });
+
+        newCharacter.addSport(sportDb);
       });
     }
   } catch (error) {
