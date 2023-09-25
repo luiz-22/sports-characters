@@ -51,7 +51,7 @@ async function seedCharacters() {
         },
       });
 
-      const newCharacter = await Character.create({
+      let newCharacter = await Character.create({
         id: characterData.id,
         name: characterData.name,
         gender: characterData.gender,
@@ -67,7 +67,7 @@ async function seedCharacters() {
           where: { name: el.name },
         });
 
-        newCharacter
+        
       });
     }
   } catch (error) {
