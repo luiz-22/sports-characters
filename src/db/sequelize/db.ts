@@ -15,11 +15,12 @@ initCharacterModel(sequelize);
 initCountryModel(sequelize);
 initSportModel(sequelize);
 
-console.log(sequelize);
-
 const { Character, Sport, Country } = sequelize.models;
 
 Character.belongsToMany(Sport, { through: "character_sport" });
 Sport.belongsToMany(Character, { through: "character_sport" });
+
+Country.hasMany(Character);
+Character.belongsTo(Country);
 
 export { sequelize };

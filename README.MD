@@ -108,7 +108,7 @@ create database sch;
 
 ```bash
 \l                 # Ver las db
-\c sch # Accedo a la db
+\c sch             # Accedo a la db
 \dt                # Ver las tablas
 \d tabla           # Detalle de la tabla
 \! cls             # Limpia la pantalla
