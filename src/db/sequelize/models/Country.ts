@@ -30,7 +30,7 @@ export const initCountryModel = (sequelize: Sequelize) => {
     },
     {
       sequelize,
-      tableName: "countries",
+      tableName: "country",
       timestamps: false,
     }
   );
