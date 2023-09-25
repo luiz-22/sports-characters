@@ -13,11 +13,11 @@
     "sports": [
       {
         "name": "badminton",
-        "icon": "🏸"
+        "icon": "127992"
       },
       {
         "name": "ice skating",
-        "icon": "⛸️"
+        "icon": "9976"
       }
     ]
   },
@@ -35,7 +35,7 @@
     "sports": [
       {
         "name": "basketball",
-        "icon": "🏀"
+        "icon": "127936"
       }
     ]
   },
@@ -53,11 +53,11 @@
     "sports": [
       {
         "name": "ajedrez",
-        "icon": "♟️"
+        "icon": "9817"
       },
       {
         "name": "football",
-        "icon": "🏈"
+        "icon": "127944"
       }
     ]
   },
@@ -75,15 +75,15 @@
     "sports": [
       {
         "name": "dice",
-        "icon": "🎲"
+        "icon": "127922"
       },
       {
         "name": "field hockey",
-        "icon": "🏑"
+        "icon": "127953"
       },
       {
         "name": "ski",
-        "icon": "🎿"
+        "icon": "127935"
       }
     ]
   },
@@ -101,19 +101,19 @@
     "sports": [
       {
         "name": "badminton",
-        "icon": "🏸"
+        "icon": "127992"
       },
       {
         "name": "ice hockey",
-        "icon": "🏒"
+        "icon": "127954"
       },
       {
         "name": "ping pong",
-        "icon": "🏓"
+        "icon": "127955"
       },
       {
         "name": "skeleton",
-        "icon": "🛷"
+        "icon": "128759"
       }
     ]
   },
@@ -131,19 +131,19 @@
     "sports": [
       {
         "name": "baseball",
-        "icon": "⚾"
+        "icon": "9918"
       },
       {
         "name": "dice",
-        "icon": "🎲"
+        "icon": "127922"
       },
       {
         "name": "yoyo",
-        "icon": "🪀"
+        "icon": "129680"
       },
       {
         "name": "softball",
-        "icon": "🥎"
+        "icon": "129358"
       }
     ]
   },
@@ -161,15 +161,15 @@
     "sports": [
       {
         "name": "billiards",
-        "icon": "🎱"
+        "icon": "127921"
       },
       {
         "name": "football",
-        "icon": "🏈"
+        "icon": "127944"
       },
       {
         "name": "scuba diving",
-        "icon": "🤿"
+        "icon": "129343"
       }
     ]
   },
@@ -187,19 +187,19 @@
     "sports": [
       {
         "name": "baseball",
-        "icon": "⚾"
+        "icon": "9918"
       },
       {
         "name": "cricket",
-        "icon": "🏏"
+        "icon": "127951"
       },
       {
         "name": "lacrosse",
-        "icon": "🥍"
+        "icon": "129357"
       },
       {
         "name": "tennis",
-        "icon": "🎾"
+        "icon": "127934"
       }
     ]
   },
@@ -217,15 +217,15 @@
     "sports": [
       {
         "name": "bowling",
-        "icon": "🎳"
+        "icon": "127923"
       },
       {
         "name": "boxing",
-        "icon": "🥊"
+        "icon": "29489"
       },
       {
         "name": "curling",
-        "icon": "🥌"
+        "icon": "129348"
       }
     ]
   },
@@ -243,19 +243,19 @@
     "sports": [
       {
         "name": "cricket",
-        "icon": "🏏"
+        "icon": "127951"
       },
       {
         "name": "football",
-        "icon": "🏈"
+        "icon": "127944"
       },
       {
         "name": "karate",
-        "icon": "🥋"
+        "icon": "129355"
       },
       {
         "name": "lacrosse",
-        "icon": "🥍"
+        "icon": "129357"
       }
     ]
   },
@@ -273,7 +273,7 @@
     "sports": [
       {
         "name": "bowling",
-        "icon": "🎳"
+        "icon": "127923"
       }
     ]
   },
@@ -291,19 +291,19 @@
     "sports": [
       {
         "name": "ajedrez",
-        "icon": "♟️"
+        "icon": "9817"
       },
       {
         "name": "badminton",
-        "icon": "🏸"
+        "icon": "127992"
       },
       {
         "name": "poker",
-        "icon": "🃏"
+        "icon": "127183"
       },
       {
         "name": "video game",
-        "icon": "🕹️"
+        "icon": "9193"
       }
     ]
   },
@@ -321,19 +321,19 @@
     "sports": [
       {
         "name": "curling",
-        "icon": "🥌"
+        "icon": "129348"
       },
       {
         "name": "field hockey",
-        "icon": "🏑"
+        "icon": "127953"
       },
       {
         "name": "fishing",
-        "icon": "🎣"
+        "icon": "127907"
       },
       {
         "name": "soccer",
-        "icon": "⚽"
+        "icon": "9917"
       }
     ]
   },
@@ -351,11 +351,11 @@
     "sports": [
       {
         "name": "dart",
-        "icon": "🎯"
+        "icon": "127919"
       },
       {
         "name": "fishing",
-        "icon": "🎣"
+        "icon": "127907"
       }
     ]
   },
@@ -373,19 +373,19 @@
     "sports": [
       {
         "name": "boxing",
-        "icon": "🥊"
+        "icon": "29489"
       },
       {
         "name": "football",
-        "icon": "🏈"
+        "icon": "127944"
       },
       {
         "name": "frisbee",
-        "icon": "🥏"
+        "icon": "129359"
       },
       {
         "name": "volleyball",
-        "icon": "🏐"
+        "icon": "127952"
       }
     ]
   },
@@ -403,19 +403,19 @@
     "sports": [
       {
         "name": "dart",
-        "icon": "🎯"
+        "icon": "127919"
       },
       {
         "name": "football",
-        "icon": "🏈"
+        "icon": "127944"
       },
       {
         "name": "ice skating",
-        "icon": "⛸️"
+        "icon": "9976"
       },
       {
         "name": "video game",
-        "icon": "🕹️"
+        "icon": "9193"
       }
     ]
   },
@@ -433,19 +433,19 @@
     "sports": [
       {
         "name": "billiards",
-        "icon": "🎱"
+        "icon": "127921"
       },
       {
         "name": "frisbee",
-        "icon": "🥏"
+        "icon": "129359"
       },
       {
         "name": "golf",
-        "icon": "⛳"
+        "icon": "9971"
       },
       {
         "name": "paintball",
-        "icon": "🔫"
+        "icon": "128299"
       }
     ]
   },
@@ -463,11 +463,11 @@
     "sports": [
       {
         "name": "basketball",
-        "icon": "🏀"
+        "icon": "127936"
       },
       {
         "name": "boxing",
-        "icon": "🥊"
+        "icon": "29489"
       }
     ]
   },
@@ -485,19 +485,19 @@
     "sports": [
       {
         "name": "baseball",
-        "icon": "⚾"
+        "icon": "9918"
       },
       {
         "name": "fishing",
-        "icon": "🎣"
+        "icon": "127907"
       },
       {
         "name": "ice skating",
-        "icon": "️⛸️"
+        "icon": "️9976"
       },
       {
         "name": "rugby",
-        "icon": "🏉"
+        "icon": "127945"
       }
     ]
   },
@@ -515,15 +515,15 @@
     "sports": [
       {
         "name": "ajedrez",
-        "icon": "♟️"
+        "icon": "9817"
       },
       {
         "name": "ice hockey",
-        "icon": "🏒"
+        "icon": "127954"
       },
       {
         "name": "karate",
-        "icon": "🥋"
+        "icon": "129355"
       }
     ]
   }
