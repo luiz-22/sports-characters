@@ -1,6 +1,6 @@
-import { Character } from "./models/Character";
-import { Country } from "./models/Country";
-import { Sport } from "./models/Sport";
+import { Character } from "./db";
+import { Country } from "./db";
+import { Sport } from "./db";
 
 // Importa fs (sistema de archivos) para leer el archivo JSON
 import fs from "fs";
@@ -45,7 +45,7 @@ async function seedCharacters() {
     const charactersData = JSON.parse(jsonData);
 
     for (const characterData of charactersData) {
-      const country = await Country.findOne({
+      const country: any = await Country.findOne({
         where: {
           name: characterData["country"]["name"],
         },
@@ -63,11 +63,11 @@ async function seedCharacters() {
 
       //console.log(characterData.sports);
       characterData.sports.forEach(async (el: any) => {
-        let sportDb: any = await Sport.findAll({
+        let sportDb = await Sport.findAll({
           where: { name: el.name },
         });
 
-        newCharacter.addSport(sportDb);
+        newCharacter
       });
     }
   } catch (error) {

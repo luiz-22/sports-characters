@@ -4,6 +4,7 @@ class Sport extends Model {
   public id!: number;
   public name!: string;
   public icon!: string;
+
 }
 
 export const initSportModel = (sequelize: Sequelize) => {

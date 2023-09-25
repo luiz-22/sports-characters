@@ -23,4 +23,4 @@ Sport.belongsToMany(Character, { through: "character_sport" });
 Country.hasMany(Character);
 Character.belongsTo(Country);
 
-export { sequelize };
+export { sequelize, Character, Sport, Country };
