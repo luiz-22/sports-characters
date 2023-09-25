@@ -1,4 +1,5 @@
-import { sportsService } from "../services";
+// import { sportsService } from "../services"; // Sin ORM
+import { sportsService } from "../db/sequelize/services"; // Sequelize
 import { Request, Response } from "express";
 import { response } from "../utils";
 

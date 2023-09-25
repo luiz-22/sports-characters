@@ -61,13 +61,16 @@ async function seedCharacters() {
         CountryId: country ? country.id : 0,
       });
 
-      //console.log(characterData.sports);
       characterData.sports.forEach(async (el: any) => {
         let sportDb = await Sport.findAll({
           where: { name: el.name },
         });
 
-        
+        // No puedo cargar en la tabla intermedia
+        if (sportDb) {
+          // Agregar la relación entre el personaje y el deporte
+          //await newCharacter.addSport(sportDb);
+        }
       });
     }
   } catch (error) {
