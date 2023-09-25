@@ -1,5 +1,4 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
-import { Sport } from "./Sport";
 
 class Character extends Model {
   public id!: number;
@@ -51,11 +50,6 @@ export const initCharacterModel = (sequelize: Sequelize) => {
       timestamps: false,
     }
   );
-
-  // Character.belongsToMany(Sport, {
-  //   through: "CharacterSports", // Nombre de la tabla intermedia que Sequelize creará automáticamente
-  //   foreignKey: "characterId", // Nombre de la clave foránea en la tabla intermedia que hace referencia a Character
-  // });
 };
 
 export { Character };

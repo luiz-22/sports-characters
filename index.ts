@@ -1,6 +1,10 @@
 import app from "./src/server";
 import { sequelize } from "./src/db/sequelize/db";
-import { seedCountries, seedSports } from "./src/db/sequelize/load-data";
+import {
+  seedCountries,
+  seedSports,
+  seedCharacters,
+} from "./src/db/sequelize/load-data";
 
 // Sin ORM
 // app.listen(3000, () => {
@@ -22,6 +26,7 @@ sequelize
     // Ejecuta la función para llenar la tabla Country y Sport con datos del JSON
     await seedCountries();
     await seedSports();
+    await seedCharacters();
 
     app.listen(3000, () => {
       console.log("Listening on port 3000.");
