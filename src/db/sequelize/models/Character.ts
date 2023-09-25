@@ -1,5 +1,4 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
-import { Sport } from "./Sport";
 
 class Character extends Model {
   public id!: number;
@@ -47,12 +46,10 @@ export const initCharacterModel = (sequelize: Sequelize) => {
     },
     {
       sequelize,
-      tableName: "characters", // Nombre de la tabla en la base de datos
-      timestamps: false, // Desactivar los campos createdAt y updatedAt
+      tableName: "characters",
+      timestamps: false,
     }
   );
 };
 
-// Aquí defines las relaciones con otros modelos (Country) en el archivo apropiado.
-
-export { Character }; // Exporta el modelo Character
+export { Character };

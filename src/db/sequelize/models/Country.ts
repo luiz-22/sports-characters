@@ -30,12 +30,10 @@ export const initCountryModel = (sequelize: Sequelize) => {
     },
     {
       sequelize,
-      tableName: "countries", // Nombre de la tabla en la base de datos
-      timestamps: false, // Desactivar los campos createdAt y updatedAt
+      tableName: "countries",
+      timestamps: false,
     }
   );
 };
 
-// Aquí puedes definir relaciones u otros métodos relacionados con el modelo Country
-
-export { Country }; // Exporta el modelo Country
+export { Country };

@@ -25,12 +25,10 @@ export const initSportModel = (sequelize: Sequelize) => {
     },
     {
       sequelize,
-      tableName: "sports", // Nombre de la tabla en la base de datos
-      timestamps: false, // Desactivar los campos createdAt y updatedAt
+      tableName: "sports",
+      timestamps: false,
     }
   );
 };
 
-// Aquí puedes definir relaciones u otros métodos relacionados con el modelo Sport
-
-export { Sport }; // Exporta el modelo Sport
+export { Sport };
