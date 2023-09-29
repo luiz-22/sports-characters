@@ -40,6 +40,12 @@ npm install --save pg pg-hstore # Postgres
 npm install dotenv
 ```
 
+### `mongoose`
+
+```bash
+npm install mongoose --save
+```
+
 ## Configuración
 
 ### `tsconfig.json`
