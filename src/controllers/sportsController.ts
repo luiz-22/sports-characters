@@ -1,5 +1,6 @@
 // import { sportsService } from "../services"; // Sin ORM
-import { sportsService } from "../db/sequelize/services"; // Sequelize
+// import { sportsService } from "../db/sequelize/services"; // Sequelize
+import { sportsService } from "../db/mongoose/services/sportsService";
 import { Request, Response } from "express";
 import { response } from "../utils";
 
