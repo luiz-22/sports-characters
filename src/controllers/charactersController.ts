@@ -47,31 +47,32 @@ const getCharacterByCountry = async (req: Request, res: Response) => {
   response(res, 200, characters);
 };
 
-// const getCharacterBySport = async (req: Request, res: Response) => {
-//   const { sport } = req.params;
-//   let characters;
+const getCharacterBySport = async (req: Request, res: Response) => {
+  const { sport } = req.params;
+  let characters;
 
-//   if (sport && typeof sport === "string") {
-//     characters = await charactersService.getCharacterBySport(sport);
-//   } else {
-//     throw new ClientError("Error in filtering by sport.", 400);
-//   }
+  if (sport && typeof sport === "string") {
+    characters = await charactersService.getCharacterBySport(sport);
+  } else {
+    throw new ClientError("Error in filtering by sport.", 400);
+  }
 
-//   response(res, 200, characters);
-// };
+  response(res, 200, characters);
+};
 
-// const createCharacter = async (req: Request, res: Response) => {
-//   const character = await charactersService.createCharacter(req.body);
-//   response(res, 200, character);
-// };
+const createCharacter = async (req: Request, res: Response) => {
+  const character = await charactersService.createCharacter(req.body);
+  response(res, 200, character);
+};
 
-// const updateCharacter = async (req: Request, res: Response) => {
-//   const character = await charactersService.updateCharacter(
-//     parseInt(req.params.id),
-//     req.body
-//   );
-//   response(res, 200, character);
-// };
+const updateCharacter = async (req: Request, res: Response) => {
+  const character = await charactersService.updateCharacter(
+    //parseInt(req.params.id),
+    req.params.id,
+    req.body
+  );
+  response(res, 200, character);
+};
 
 // const deleteCharacter = async (req: Request, res: Response) => {
 //   const character = await charactersService.deleteCharacter(
@@ -85,8 +86,8 @@ export const charactersController = {
   getCharacterById: catchAsync(getCharacterById),
   getCharacterByGender: catchAsync(getCharacterByGender),
   getCharacterByCountry: catchAsync(getCharacterByCountry),
-  // getCharacterBySport: catchAsync(getCharacterBySport),
-  // createCharacter: catchAsync(createCharacter),
-  // updateCharacter: catchAsync(updateCharacter),
+  getCharacterBySport: catchAsync(getCharacterBySport),
+  createCharacter: catchAsync(createCharacter),
+  updateCharacter: catchAsync(updateCharacter),
   // deleteCharacter: catchAsync(deleteCharacter),
 };

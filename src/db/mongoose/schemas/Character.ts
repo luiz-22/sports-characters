@@ -18,7 +18,7 @@ interface ICharacter {
 }
 
 const characterSchema = new Schema<ICharacter>({
-  _id: { type: Number, required: true },
+  //_id: { type: Number, required: false },
   name: { type: String, required: true },
   gender: { type: String, required: true },
   age: { type: Number, required: true },
