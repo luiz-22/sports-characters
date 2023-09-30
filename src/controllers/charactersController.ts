@@ -15,37 +15,37 @@ const getCharacters = async (req: Request, res: Response) => {
   response(res, 200, characters);
 };
 
-// const getCharacterById = async (req: Request, res: Response) => {
-//   const { id } = req.params;
-//   const character = await charactersService.getCharacterById(parseInt(id));
-//   response(res, 200, character);
-// };
+const getCharacterById = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const character = await charactersService.getCharacterById(parseInt(id));
+  response(res, 200, character);
+};
 
-// const getCharacterByGender = async (req: Request, res: Response) => {
-//   const { gender } = req.params;
-//   let characters;
+const getCharacterByGender = async (req: Request, res: Response) => {
+  const { gender } = req.params;
+  let characters;
 
-//   if (gender && typeof gender === "string") {
-//     characters = await charactersService.getCharacterByGender(gender);
-//   } else {
-//     throw new ClientError("Error in filtering by gender.", 400);
-//   }
+  if (gender && typeof gender === "string") {
+    characters = await charactersService.getCharacterByGender(gender);
+  } else {
+    throw new ClientError("Error in filtering by gender.", 400);
+  }
 
-//   response(res, 200, characters);
-// };
+  response(res, 200, characters);
+};
 
-// const getCharacterByCountry = async (req: Request, res: Response) => {
-//   const { country } = req.params;
-//   let characters;
+const getCharacterByCountry = async (req: Request, res: Response) => {
+  const { country } = req.params;
+  let characters;
 
-//   if (country && typeof country === "string") {
-//     characters = await charactersService.getCharacterByCountry(country);
-//   } else {
-//     throw new ClientError("Error in filtering by country.", 400);
-//   }
+  if (country && typeof country === "string") {
+    characters = await charactersService.getCharacterByCountry(country);
+  } else {
+    throw new ClientError("Error in filtering by country.", 400);
+  }
 
-//   response(res, 200, characters);
-// };
+  response(res, 200, characters);
+};
 
 // const getCharacterBySport = async (req: Request, res: Response) => {
 //   const { sport } = req.params;
@@ -82,9 +82,9 @@ const getCharacters = async (req: Request, res: Response) => {
 
 export const charactersController = {
   getCharacters: catchAsync(getCharacters),
-  // getCharacterById: catchAsync(getCharacterById),
-  // getCharacterByGender: catchAsync(getCharacterByGender),
-  // getCharacterByCountry: catchAsync(getCharacterByCountry),
+  getCharacterById: catchAsync(getCharacterById),
+  getCharacterByGender: catchAsync(getCharacterByGender),
+  getCharacterByCountry: catchAsync(getCharacterByCountry),
   // getCharacterBySport: catchAsync(getCharacterBySport),
   // createCharacter: catchAsync(createCharacter),
   // updateCharacter: catchAsync(updateCharacter),
