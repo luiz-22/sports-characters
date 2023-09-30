@@ -1,4 +1,3 @@
-import { Types, ObjectId } from "mongoose";
 import { Character, Country, Sport } from "../index";
 import ClientError from "../../../errors/errors";
 
@@ -10,10 +9,8 @@ const getCharacterByName = async (name: string) => {
   return await Character.find({ name });
 };
 
-const getCharacterById = async (id: number) => {
-  const character = Character.findById(id);
-  if (!character) throw new ClientError("Invalid ID", 400);
-  return character;
+const getCharacterById = async (id: any) => {
+  return await Character.findById(id);
 };
 
 const getCharacterByGender = async (gender: string) => {
@@ -68,9 +65,6 @@ const createCharacter = async (character: any) => {
 };
 
 const updateCharacter = async (id: any, character: any) => {
-  // Verifica si id es un número o un ObjectId y conviértelo a ObjectId si es necesario
-  const objectId = Types.ObjectId.isValid(id) ? new Types.ObjectId(id) : id;
-
   const country = await Country.findOne({ name: character.country });
 
   if (!country) {
@@ -108,15 +102,22 @@ const updateCharacter = async (id: any, character: any) => {
     })),
   };
 
-  console.log(id);
-  console.log(objectId);
-
   return await Character.replaceOne(
     {
-      _id: objectId, // Usa el objectId convertido
+      _id: id,
     },
     updateCharacterData
   );
+};
+
+const deleteCharacter = async (id: any) => {
+  const result = await Character.deleteOne({ _id: id });
+
+  if (result.deletedCount === 1) {
+    return "Character deleted successfully";
+  } else {
+    return "Character not found or not deleted";
+  }
 };
 
 export const charactersService = {
@@ -128,4 +129,5 @@ export const charactersService = {
   getCharacterBySport,
   createCharacter,
   updateCharacter,
+  deleteCharacter,
 };

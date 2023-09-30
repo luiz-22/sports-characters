@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 interface ICharacter {
-  _id: number;
+  _id: any;
   name: string;
   gender: string;
   age: number;
@@ -18,7 +18,7 @@ interface ICharacter {
 }
 
 const characterSchema = new Schema<ICharacter>({
-  //_id: { type: Number, required: false },
+  //_id: { type: Schema.Types.Mixed },
   name: { type: String, required: true },
   gender: { type: String, required: true },
   age: { type: Number, required: true },
