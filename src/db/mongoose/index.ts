@@ -1,13 +1,14 @@
-import mongoose, { Connection } from "mongoose";
+import { connect } from "mongoose";
 import { envs } from "../../config/envs";
-import { sportSchema, Sport } from "./schemas/Sport";
-import CountryModel from "./schemas/Country";
-import CharacterModel from "./schemas/Character";
+import Sport from "./schemas/Sport";
+import Country from "./schemas/Country";
+import Character from "./schemas/Character";
+import ClientError from "../../errors/errors";
 
-const conn: Connection = mongoose.createConnection(envs.MONGO_URI);
+try {
+  connect(envs.MONGO_URI);
+} catch (error) {
+  throw new ClientError("Error connecting to the database.");
+}
 
-const Sport = conn.model<Sport>("Sport", sportSchema);
-// const Country = conn.model("Country", CountryModel);
-// const Character = conn.model("Character", CharacterModel);
-
-export { Sport };
+export { Sport, Country, Character };

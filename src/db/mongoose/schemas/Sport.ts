@@ -1,21 +1,17 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import { Schema, model } from "mongoose";
 
-export interface Sport extends Document {
+interface ISport {
   _id: number;
   name: string;
   icon: string;
 }
 
-const sportSchema = new Schema<Sport>({
+const sportSchema = new Schema<ISport>({
   _id: { type: Number, required: true },
   name: { type: String, required: true },
   icon: { type: String, required: true },
 });
 
-sportSchema.statics.list = async function (): Promise<Sport[]> {
-  return this.find().exec();
-};
+const Sport = model<ISport>("Sport", sportSchema);
 
-//const SportModel = mongoose.model<Sport, SportModel>("Sport", sportSchema);
-
-export default sportSchema;
+export default Sport;

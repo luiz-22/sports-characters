@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document } from "mongoose";
+import { Schema, model } from "mongoose";
 
-interface Character extends Document {
+interface ICharacter {
   id: number;
   name: string;
   gender: string;
@@ -17,7 +17,7 @@ interface Character extends Document {
   }>;
 }
 
-const characterSchema = new Schema<Character>({
+const characterSchema = new Schema<ICharacter>({
   id: { type: Number, required: true },
   name: { type: String, required: true },
   gender: { type: String, required: true },
@@ -36,6 +36,6 @@ const characterSchema = new Schema<Character>({
   ],
 });
 
-const CharacterModel = mongoose.model<Character>("Character", characterSchema);
+const Character = model<ICharacter>("Character", characterSchema);
 
-export default CharacterModel;
+export default Character;

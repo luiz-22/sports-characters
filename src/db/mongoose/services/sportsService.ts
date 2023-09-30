@@ -1,9 +1,9 @@
-import SportModel from "../schemas/Sport";
+//import { Sport } from "../index";
+import { Sport } from "../index";
 
 const getSports = async () => {
-  //return await SportModel.list();
-  console.log(SportModel.list());
-  return "hola";
+  //return await Sport.list();
+  return Sport.find();
 };
 
 export const sportsService = { getSports };
