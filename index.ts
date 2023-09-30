@@ -1,5 +1,5 @@
 import app from "./src/server";
-import sequelizeConn from "./src/db/sequelize";
+//import sequelizeConn from "./src/db/sequelize";
 
 // Sin ORM y Mongoose
 app.listen(3000, () => {
