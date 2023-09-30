@@ -1,9 +1,7 @@
-//import { Sport } from "../index";
 import { Sport } from "../index";
 
 const getSports = async () => {
-  //return await Sport.list();
-  return Sport.find();
+  return await Sport.find();
 };
 
 export const sportsService = { getSports };
