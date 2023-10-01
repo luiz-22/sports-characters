@@ -6,25 +6,25 @@
 npm install express
 ```
 
-### `typescript`
+**`typescript`**
 
 ```bash
 npm install --save-dev typescript @types/node @types/express ts-node
 ```
 
-### `jsonfile`
+**`jsonfile`**
 
 ```bash
 npm install --save jsonfile
 ```
 
-### `express-validator`
+**`express-validator`**
 
 ```bash
 npm install express-validator
 ```
 
-### `sequelize`
+**`sequelize`**
 
 ```bash
 npm install --save sequelize
@@ -34,59 +34,17 @@ npm install --save sequelize
 npm install --save pg pg-hstore # Postgres
 ```
 
-### `dotenv`
+**`dotenv`**
 
 ```bash
 npm install dotenv
 ```
 
-### `mongoose`
+**`mongoose`**
 
 ```bash
 npm install mongoose --save
 ```
-
-## Configuración
-
-### `tsconfig.json`
-
-Crea un archivo `tsconfig.json` en el directorio raíz de tu proyecto con la siguiente configuración inicial:
-
-```json
-{
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true
-  }
-}
-```
-
-### `package.json`
-
-Abre tu archivo `package.json` y define los siguientes scripts en la sección "scripts":
-
-```json
-"scripts": {
-    "start": "nodemon index.ts",
-    "build": "tsc",
-    "watch:ts": "tsc --watch"
-}
-```
-
-## Modelo E-R
-
-| sport | N:M | character | N:1 | country |
-| ----- | --- | --------- | --- | ------- |
-| id    |     | id        |     | id      |
-| name  |     | name      |     | name    |
-| icon  |     | gender    |     | flag    |
-|       |     | age       |     | code    |
-|       |     | height    |     |         |
-|       |     | image     |     |         |
 
 ## Ejemplo de un post
 
@@ -100,22 +58,4 @@ Abre tu archivo `package.json` y define los siguientes scripts en la sección "s
   "country": "Bulgaria",
   "sports": ["curling", "frisbee", "yoyo"]
 }
-```
-
-## PostgreSQL
-
-### Crear una la db
-
-```bash
-create database sch;
-```
-
-### Comandos
-
-```bash
-\l                 # Ver las db
-\c sch             # Accedo a la db
-\dt                # Ver las tablas
-\d tabla           # Detalle de la tabla
-\! cls             # Limpia la pantalla
 ```
