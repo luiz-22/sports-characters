@@ -14,7 +14,7 @@ https://sports-characters.onrender.com/countries
 
 https://sports-characters.onrender.com/sports
 
-También su puede buscar un personaje por género, país y deporte. Además, se puede crear, modificar y eliminar un personaje.
+También se puede buscar un personaje por género, país y deporte. Además, se puede crear, modificar y eliminar un personaje.
 
 ## Dependencias
 
