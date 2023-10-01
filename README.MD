@@ -1,6 +1,6 @@
-## Instalación
+## Dependencias
 
-### `express`
+**`express`**
 
 ```bash
 npm install express
