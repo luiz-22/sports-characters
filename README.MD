@@ -6,6 +6,16 @@ Esta desarrollada con `NodeJS`, `Express` y `TypeScript`.
 
 En la capa de servicios primero usamos `jsonfile` para persistir los datos, luego usamos `Sequelize` y por último `Mongoose`.
 
+## Rutas
+
+https://sports-characters.onrender.com/characters
+
+https://sports-characters.onrender.com/countries
+
+https://sports-characters.onrender.com/sports
+
+También su puede buscar un personaje por género, país y deporte. Además, se puede crear, modificar y eliminar un personaje.
+
 ## Dependencias
 
 **`express`**
