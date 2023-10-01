@@ -1,6 +1,6 @@
 # 🏅 Sports Characters
 
-Sports Game es una `API` que trae una de lista países, una lista de deportes y personajes que tienen un país y practican algunos deportes.
+Sports Characters es una `API` que trae una de lista países, una lista de deportes y personajes que tienen un país y practican algunos deportes.
 
 Esta desarrollada con `NodeJS`, `Express` y `TypeScript`.
 
