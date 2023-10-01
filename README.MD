@@ -4,7 +4,7 @@ Sports Characters es una `API` que trae una de lista países, una lista de depor
 
 Esta desarrollada con `NodeJS`, `Express` y `TypeScript`.
 
-En la capa de servicios primero usamos `jsonfile` para persistir los datos, luego usamos `Sequelize` y por último `Mongoose`.
+En la capa de servicios primero usamos `jsonfile` para persistir los datos, luego usamos `Sequelize` y por último lo dejamos con `Mongoose`.
 
 ## Rutas
 
