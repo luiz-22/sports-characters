@@ -4,7 +4,7 @@
   "description": "practice",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "node index.ts",
     "build": "tsc",
     "watch:ts": "tsc --watch"
   },
