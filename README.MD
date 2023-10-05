@@ -64,6 +64,12 @@ npm install dotenv
 npm install mongoose --save
 ```
 
+**`jest y supertest`**
+
+```bash
+npm install --save-dev jest @types/jest ts-jest supertest
+```
+
 ## Ejemplo de un post
 
 ```json
